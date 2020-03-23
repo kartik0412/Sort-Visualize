@@ -87,6 +87,8 @@ export default function mergesort(arr, n, pace, toggleIsOn, finish) {
 				}
 				document.getElementById(a[i][1]).style.background = "red";
 				document.getElementById(a[i][2]).style.background = "red";
+				let value = document.getElementById("swap").innerHTML;
+				document.getElementById("swap").innerHTML = Number(value) + 1;
 			}, pace * i);
 		} else if (a[i][0] === 2) {
 			setTimeout(() => {
@@ -108,6 +110,8 @@ export default function mergesort(arr, n, pace, toggleIsOn, finish) {
 			}
 			setTimeout(() => {
 				document.getElementById(a[i][1]).style.background = "#00ff44";
+				let value = document.getElementById("swap").innerHTML;
+				document.getElementById("swap").innerHTML = Number(value) + 1;
 			}, pace * i);
 		}
 	}

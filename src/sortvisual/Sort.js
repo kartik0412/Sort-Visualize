@@ -48,6 +48,7 @@ class SortVisualization extends React.Component {
 				ison: false
 			},
 			() => {
+				document.getElementById("swap").innerHTML = 0;
 				let x = Math.floor((1024 - this.state.size * 2) / this.state.size);
 				for (let i = 0; i < array.length; i++) {
 					document.getElementById(i).style.background = "#FFD700";
@@ -77,6 +78,7 @@ class SortVisualization extends React.Component {
 				speed: NewValue
 			},
 			() => {
+				document.getElementById("swap").innerHTML = 0;
 				let x = Math.floor((1024 - this.state.size * 2) / this.state.size);
 				for (let i = 0; i < array.length; i++) {
 					document.getElementById(i).style.background = "#FFD700";
@@ -155,44 +157,52 @@ class SortVisualization extends React.Component {
 		const { array } = this.state;
 		return (
 			<>
-				<div className="header">
-					<label className="speed">
+				<div className='header'>
+					<label className='speed'>
 						<span>Speed</span>
 						<input
-							className="slider"
+							className='slider'
 							disabled={this.state.ison}
 							onChange={this.handleRange}
 							value={this.state.size}
-							type="range"
-							min="10"
-							max="150"
+							type='range'
+							min='10'
+							max='150'
 						/>
 					</label>
 
-					<button disabled={this.state.ison} className="btn" onClick={this.bubbleSort}>
+					<button disabled={this.state.ison} className='btn' onClick={this.bubbleSort}>
 						Bubble Sort
 					</button>
-					<button disabled={this.state.ison} className="btn" onClick={this.selectionSort}>
+					<button disabled={this.state.ison} className='btn' onClick={this.selectionSort}>
 						Selection Sort
 					</button>
-					<button disabled={this.state.ison} className="btn" onClick={this.mergeSort}>
+					<button disabled={this.state.ison} className='btn' onClick={this.mergeSort}>
 						Merge Sort
 					</button>
-					<button disabled={this.state.ison} className="btn" onClick={this.heapSort}>
+					<button disabled={this.state.ison} className='btn' onClick={this.heapSort}>
 						Heap Sort
 					</button>
-					<button disabled={this.state.ison} className="btn" onClick={this.quickSort}>
+					<button disabled={this.state.ison} className='btn' onClick={this.quickSort}>
 						Quick Sort
 					</button>
-					<button disabled={this.state.ison} className="btn" onClick={this.resetArray}>
+					<button disabled={this.state.ison} className='btn' onClick={this.resetArray}>
 						Reset
 					</button>
 				</div>
 
-				<div className="arrayContainer">
+				<div className='arrayContainer'>
 					{array.map((x, i) => (
-						<div key={i} id={i} style={{ height: `${x}px` }} className="arrayBar"></div>
+						<div key={i} id={i} style={{ height: `${x}px` }} className='arrayBar'></div>
 					))}
+				</div>
+				<div className='swapBox'>
+					<p className='swapContainer'>
+						Swaps :
+						<span id='swap' className='swapValue'>
+							0
+						</span>
+					</p>
 				</div>
 			</>
 		);

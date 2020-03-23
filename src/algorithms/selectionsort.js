@@ -33,6 +33,8 @@ export default function selectionsort(arr, n, pace, toggleIsOn, finish) {
 				}
 				document.getElementById(a[i][1]).style.backgroundColor = "red";
 				document.getElementById(a[i][2]).style.backgroundColor = "red";
+				let value = document.getElementById("swap").innerHTML;
+				document.getElementById("swap").innerHTML = Number(value) + 1;
 			}, pace * i);
 		} else if (a[i][0] === 2) {
 			setTimeout(() => {
