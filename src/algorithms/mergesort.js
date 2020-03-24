@@ -67,7 +67,7 @@ export default function mergesort(arr, n, pace, toggleIsOn, finish) {
 			setTimeout(() => {
 				toggleIsOn();
 				finish(arr);
-			}, pace * (i - 1));
+			}, pace * i);
 		} else if (i === a.length && i > 0) {
 			setTimeout(() => {
 				if (i > 0 && a[i - 1][0] !== 3) {

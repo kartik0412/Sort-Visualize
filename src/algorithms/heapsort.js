@@ -17,7 +17,7 @@ export default function heapsort(arr, n, pace, toggleIsOn, finish) {
 			setTimeout(() => {
 				toggleIsOn();
 				finish(arr);
-			}, pace * (i - 1));
+			}, pace * i);
 		} else if (a[i][0] === 1) {
 			setTimeout(() => {
 				if (i > 0 && a[i - 1][0] !== 3) {

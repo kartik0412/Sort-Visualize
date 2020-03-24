@@ -25,7 +25,6 @@ export default function selectionsort(arr, n, pace, toggleIsOn, finish) {
 				finish(arr);
 			}, pace * (i - 1));
 		} else if (a[i][0] === 1) {
-			console.log(i);
 			setTimeout(() => {
 				if (i > 0 && a[i - 1][0] !== 3) {
 					document.getElementById(a[i - 1][1]).style.backgroundColor = "#FFD700";
