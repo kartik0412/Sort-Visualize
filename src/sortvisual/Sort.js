@@ -3,8 +3,11 @@ import "./Sort.css";
 import heapsort from "../algorithms/heapsort";
 import bubblesort from "../algorithms/bubblesort";
 import selectionsort from "../algorithms/selectionsort";
+import insertionsort from "../algorithms/insertionsort";
 import mergesort from "../algorithms/mergesort";
 import quicksort from "../algorithms/quicksort";
+import countingsort from "../algorithms/countingsort";
+import radixsort from "../algorithms/radixsort";
 
 class SortVisualization extends React.Component {
 	constructor() {
@@ -16,10 +19,13 @@ class SortVisualization extends React.Component {
 		};
 		this.bubbleSort = this.bubbleSort.bind(this);
 		this.selectionSort = this.selectionSort.bind(this);
+		this.insertionSort = this.insertionSort.bind(this);
 		this.mergeSort = this.mergeSort.bind(this);
 		this.resetArray = this.resetArray.bind(this);
 		this.heapSort = this.heapSort.bind(this);
 		this.quickSort = this.quickSort.bind(this);
+		this.countingSort = this.countingSort.bind(this);
+		this.radixSort = this.radixSort.bind(this);
 		this.handleRange = this.handleRange.bind(this);
 		this.toggleIsOn = this.toggleIsOn.bind(this);
 		this.handleFinish = this.handleFinish.bind(this);
@@ -114,6 +120,19 @@ class SortVisualization extends React.Component {
 		);
 	}
 
+	insertionSort() {
+		let arr = this.state.array;
+		let n = arr.length;
+		this.setState(
+			{
+				ison: true
+			},
+			() => {
+				insertionsort(arr, n, this.state.speed, this.toggleIsOn, this.handleFinish);
+			}
+		);
+	}
+
 	heapSort() {
 		let arr = this.state.array;
 		let n = arr.length;
@@ -126,7 +145,18 @@ class SortVisualization extends React.Component {
 			}
 		);
 	}
-
+	mergeSort() {
+		let arr = this.state.array;
+		let n = arr.length;
+		this.setState(
+			{
+				ison: true
+			},
+			() => {
+				mergesort(arr, n, this.state.speed, this.toggleIsOn, this.handleFinish);
+			}
+		);
+	}
 	quickSort() {
 		let arr = this.state.array;
 		let n = arr.length;
@@ -140,7 +170,7 @@ class SortVisualization extends React.Component {
 		);
 	}
 
-	mergeSort() {
+	countingSort() {
 		let arr = this.state.array;
 		let n = arr.length;
 		this.setState(
@@ -148,7 +178,20 @@ class SortVisualization extends React.Component {
 				ison: true
 			},
 			() => {
-				mergesort(arr, n, this.state.speed, this.toggleIsOn, this.handleFinish);
+				countingsort(arr, n, this.state.speed, this.toggleIsOn, this.handleFinish);
+			}
+		);
+	}
+
+	radixSort() {
+		let arr = this.state.array;
+		let n = arr.length;
+		this.setState(
+			{
+				ison: true
+			},
+			() => {
+				radixsort(arr, n, this.state.speed, this.toggleIsOn, this.handleFinish);
 			}
 		);
 	}
@@ -177,6 +220,9 @@ class SortVisualization extends React.Component {
 					<button disabled={this.state.ison} className='btn' onClick={this.selectionSort}>
 						Selection Sort
 					</button>
+					<button disabled={this.state.ison} className='btn' onClick={this.insertionSort}>
+						Insertion Sort
+					</button>
 					<button disabled={this.state.ison} className='btn' onClick={this.mergeSort}>
 						Merge Sort
 					</button>
@@ -185,6 +231,12 @@ class SortVisualization extends React.Component {
 					</button>
 					<button disabled={this.state.ison} className='btn' onClick={this.quickSort}>
 						Quick Sort
+					</button>
+					<button disabled={this.state.ison} className='btn' onClick={this.countingSort}>
+						Counting Sort
+					</button>
+					<button disabled={this.state.ison} className='btn' onClick={this.radixSort}>
+						Radix Sort
 					</button>
 					<button disabled={this.state.ison} className='btn' onClick={this.resetArray}>
 						Reset
