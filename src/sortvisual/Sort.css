@@ -1,119 +1,119 @@
 .arrayContainer {
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-	height: 425px;
-	overflow: hidden;
-	width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 425px;
+    overflow: hidden;
+    width: 100%;
 }
 .speed {
-	height: 50px;
-	text-transform: uppercase;
-	margin-top: 44px;
-	font: 1em "Fira Sans", sans-serif;
-	font-weight: 500;
+    height: 50px;
+    text-transform: uppercase;
+    margin-top: 44px;
+    font: 1em "Fira Sans", sans-serif;
+    font-weight: 500;
 }
 
 .swapBox {
-	width: 90%;
-	font-weight: bolder;
-	margin: 15px auto;
-	font: 1.25em "Fira Sans", sans-serif;
-	color: white;
-	text-align: left;
+    width: 90%;
+    font-weight: bolder;
+    margin: 10px auto;
+    font: 1.15em "Fira Sans", sans-serif;
+    color: white;
+    text-align: left;
 }
 
 .swapValue {
-	margin: 2px;
+    margin: 2px;
 }
 
 .btn {
-	display: inline-block;
-	margin: 0 50px;
-	align-self: center;
-	height: 40px;
-	margin-top: 20px;
-	padding: 0.4em 1.2em;
-	border: 0.2em solid black;
-	margin: 0 0.3em 0.3em 0;
-	border-radius: 0.2em;
-	box-sizing: border-box;
-	text-transform: uppercase;
-	text-decoration: none;
-	font: 0.8em "Fira Sans", sans-serif;
-	font-weight: bold;
-	color: black;
-	background-color: white;
-	text-align: center;
-	transition: all 0.1s;
+    display: inline-block;
+    margin: 0 50px;
+    align-self: center;
+    height: 40px;
+    margin-top: 20px;
+    padding: 0.4em 1.2em;
+    border: 0.2em solid black;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    font: 0.8em "Fira Sans", sans-serif;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    text-align: center;
+    transition: all 0.1s;
 }
 .btn:hover {
-	color: white;
-	background-color: black;
-	transform: scale(1.05);
+    color: white;
+    background-color: black;
+    transform: scale(1.05);
 }
 .btn:focus {
-	outline: none;
+    outline: none;
 }
 
 .slider {
-	-webkit-appearance: none;
-	height: 2px;
-	width: 90px;
-	margin: 10px;
-	background: #d3d3d3;
-	outline: none;
-	opacity: 0.7;
-	-webkit-transition: 0.2s;
-	transition: opacity 0.2s;
-	transform: rotate(9);
+    -webkit-appearance: none;
+    height: 2px;
+    width: 90px;
+    margin: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+    transform: rotate(9);
 }
 
 .slider:hover {
-	opacity: 1;
+    opacity: 1;
 }
 
 .slider::-webkit-slider-thumb {
-	-webkit-appearance: none;
-	appearance: none;
-	width: 10px;
-	height: 10px;
-	border-radius: 100px;
-	background: black;
-	cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    background: black;
+    cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
-	width: 25px;
-	height: 25px;
-	background: #4caf50;
-	cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background: #4caf50;
+    cursor: pointer;
 }
 
 .arrayBar {
-	width: 3px;
-	margin: 0 2px;
-	transition: ease;
-	background-color: "#FFD700";
+    width: 3px;
+    margin: 0 2px;
+    transition: ease;
+    background-color: "#FFD700";
 }
 
 button {
-	display: inline-block;
+    display: inline-block;
 }
 
 html,
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	background-color: black;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: black;
 }
 
 .header {
-	width: 100%;
-	height: 120px;
-	background-color: white;
-	display: flex;
-	justify-content: center;
-	justify-items: center;
+    width: 100%;
+    height: 120px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
 }
